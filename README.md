@@ -33,13 +33,13 @@ As seen in the [Amazon Linux extension](deep-security/99deepsecurity-amzn1-x86_6
 ```
 commands:
   00download:
-    command: 'wget https://REPACE-WITH-YOUR-DSM-IP:4119/software/agent/amzn1/x86_64/ -O /tmp/agent.rpm --quiet --no-check-certificates`'
+    command: 'wget https://REPLACE-WITH-YOUR-DSM-IP:4119/software/agent/amzn1/x86_64/ -O /tmp/agent.rpm --quiet --no-check-certificates`'
 ...
   03activate:
-    command: '/opt/ds_agent/dsa_control -a dsm://REPACE-WITH-YOUR-DSM-IP:4120/ "policyid:REPLACE-WITH-YOUR-POLICY-ID" --max-dsm-retries 0 >/tmp/dsa_control.log 2>&1'
+    command: '/opt/ds_agent/dsa_control -a dsm://REPLACE-WITH-YOUR-DSM-IP:4120/ "policyid:REPLACE-WITH-YOUR-POLICY-ID" --max-dsm-retries 0 >/tmp/dsa_control.log 2>&1'
 ```
 
-1. in ```00download:```, ```https://REPACE-WITH-YOUR-DSM-IP:4119```
+1. in ```00download:```, ```https://REPLACE-WITH-YOUR-DSM-IP:4119```
 1. in ```03activate:```, ```dsm://REPLACE-WITH-YOUR-DSM-IP:4120/```
 1. in ```03activate:```, ```"policyid:REPLACE-WITH-YOUR-POLICY-ID"```
 
