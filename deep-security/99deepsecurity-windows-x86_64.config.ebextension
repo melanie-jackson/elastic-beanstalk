@@ -1,6 +1,6 @@
 packages:
   msi:
-    deepsecurity: https://app.deepsecurity.trendmicro.com:443/software/agent/Windows/x86_64/
+    deepsecurity: https://REPACE-WITH-YOUR-DSM-IP:4119/software/agent/Windows/x86_64/
 
 commands:
   00wait:

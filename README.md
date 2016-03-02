@@ -26,13 +26,21 @@ You can find this information within the Deep Security Manager console under **S
 
 ### Using The .ebextension With Deep Security
 
-To configure the .ebextension for use with your own Deep Security deployment, you will need to replace 2 items in the appropriate .ebextension. These items is in the final command in the extension (the activation step for the Deep Security agent).
+To configure the .ebextension for use with your own Deep Security deployment, you will need to replace 3 items in the appropriate .ebextension. These items is in the final command in the extension (the activation step for the Deep Security agent).
 
 As seen in the [Amazon Linux extension](deep-security/99deepsecurity-amzn1-x86_64.config.ebextension#L9)
 
-```command: '/opt/ds_agent/dsa_control -a dsm://REPACE-WITH-YOUR-DSM-IP:4120/ "policyid:REPLACE-WITH-YOUR-POLICY-ID" --max-dsm-retries 0 >/tmp/dsa_control.log 2>&1'```
+```
+commands:
+  00download:
+    command: 'wget https://REPACE-WITH-YOUR-DSM-IP:4119/software/agent/amzn1/x86_64/ -O /tmp/agent.rpm --quiet --no-check-certificates`'
+...
+  03activate:
+    command: '/opt/ds_agent/dsa_control -a dsm://REPACE-WITH-YOUR-DSM-IP:4120/ "policyid:REPLACE-WITH-YOUR-POLICY-ID" --max-dsm-retries 0 >/tmp/dsa_control.log 2>&1'
+```
 
-1. ```dsm://REPLACE-WITH-YOUR-DSM-IP:4120/```
-1. ```"policyid:REPLACE-WITH-YOUR-POLICY-ID"```
+1. in ```00download:```, ```https://REPACE-WITH-YOUR-DSM-IP:4119```
+1. in ```03activate:```, ```dsm://REPLACE-WITH-YOUR-DSM-IP:4120/```
+1. in ```03activate:```, ```"policyid:REPLACE-WITH-YOUR-POLICY-ID"```
 
 You can find this information within the Deep Security Manager console under **Help > Deployment Scripts**. This dialog will allow you to create a customized deployment script that contains these values.

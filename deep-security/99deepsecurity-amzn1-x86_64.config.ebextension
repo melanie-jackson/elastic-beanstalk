@@ -1,6 +1,6 @@
 commands:
   00download:
-    command: 'wget https://app.deepsecurity.trendmicro.com:443/software/agent/amzn1/x86_64/ -O /tmp/agent.rpm --quiet'
+    command: 'wget https://REPACE-WITH-YOUR-DSM-IP:4119/software/agent/amzn1/x86_64/ -O /tmp/agent.rpm --quiet --no-check-certificates`'
   01install:
     command: 'rpm --replacepkgs -ihv /tmp/agent.rpm'
   02sleep:
