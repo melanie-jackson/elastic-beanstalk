@@ -18,8 +18,8 @@ As seen in the [Amazon Linux extension](deep-security-as-a-service/99deepsecurit
 
 ```command: '/opt/ds_agent/dsa_control -a dsm://agents.deepsecurity.trendmicro.com:443/ "tenantID:REPLACE-WITH-YOUR-TENANT-ID" "tenantPassword:REPLACE-WITH-YOUR-TENANT-PASSWORD" "policyid:REPLACE-WITH-YOUR-POLICY-ID" --max-dsm-retries 0 >/tmp/dsa_control.log 2>&1'```
 
-1. ```"tenantID:**REPLACE-WITH-YOUR-TENANT-ID**"```
-1. ```"tenantPassword:**REPLACE-WITH-YOUR-TENANT-PASSWORD**"```
+1. ```"tenantID:REPLACE-WITH-YOUR-TENANT-ID"```
+1. ```"tenantPassword:REPLACE-WITH-YOUR-TENANT-PASSWORD"```
 1. ```"policyid:REPLACE-WITH-YOUR-POLICY-ID"```
 
 You can find this information within the Deep Security Manager console under **Support > Deployment Scripts**. This dialog will allow you to create a customized deployment script that contains these values.
@@ -32,7 +32,7 @@ As seen in the [Amazon Linux extension](deep-security/99deepsecurity-amzn1-x86_6
 
 ```command: '/opt/ds_agent/dsa_control -a dsm://REPACE-WITH-YOUR-DSM-IP:4120/ "policyid:REPLACE-WITH-YOUR-POLICY-ID" --max-dsm-retries 0 >/tmp/dsa_control.log 2>&1'```
 
-1. ```dsm://**REPACE-WITH-YOUR-DSM-IP**:4120/```
+1. ```dsm://REPACE-WITH-YOUR-DSM-IP:4120/```
 1. ```"policyid:REPLACE-WITH-YOUR-POLICY-ID"```
 
 You can find this information within the Deep Security Manager console under **Help > Deployment Scripts**. This dialog will allow you to create a customized deployment script that contains these values.
