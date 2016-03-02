@@ -10,8 +10,6 @@ To integrate Deep Security Agent into the AWS Elastic Beanstalk configuration:
 1. Add the configuration file to the ```.ebextensions``` directory of your source bundle.
 1. Re-deploy your application and your servers will automatically download the latest Agent and activate into the list of instances on the Computers page in Deep Security. 
 
-> Tip: To locate your tenant ID, password and policy ID, go to Support > Deployment Scripts to display the Deployment Script Generator. Generate a script, then copy the values from the script.
-
 ### Using The .ebextension With Deep Security as a Service
 
 To configure the .ebextension for use with [Deep Security as a Service](https://app.deepsecurity.trendmicro.com/SignIn.screen), you will need to replace 3 items in the appropriate .ebextension. Each of these items is in the final command in the extension (the activation step for the Deep Security agent).
